@@ -1,1 +1,1 @@
-A blog build in astro.
+A blog built in astro.
