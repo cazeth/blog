@@ -1,0 +1,18 @@
+---
+// post is the blog post-object that you want to link to. Lines is an integer of
+// values 1,2,3, where 1 means a link with only the post title, 2 means a link
+//plus the title and subtitle, or if there is no subtitle, the pubdate. 3 means
+//title, subtitle and pubdate.
+import '../styles/global.css';
+const {post, lines} = Astro.props;
+---
+<a href={post.url}>
+	<div class="link-div">
+		{lines == 1 && <h2 style="padding-top:0.5em; padding-bottom:0.5em">{post.frontmatter.title}</h2>}
+		{lines >= 2 && <h2 style="padding-top:0.7em">{post.frontmatter.title}</h2>}
+		{lines == 2 && (post.frontmatter.summary) && <h3 style="padding-bottom:0.7em">{post.frontmatter.summary}</h3>}
+		{lines == 2 && (!post.frontmatter.summary) && <h3 style="padding-bottom:0.7em">{post.frontmatter.date}</h3>}
+		{lines == 3 && (post.frontmatter.summary) && <h3>{post.frontmatter.summary}</h3>}
+		{lines == 3 && <h3 style="padding-bottom:0.7em">{post.frontmatter.date}</h3>}
+	</div>
+</a>
