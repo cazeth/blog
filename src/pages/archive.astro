@@ -1,0 +1,16 @@
+---
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostLink from '../components/PostLink.astro';
+const allPosts = await Astro.glob('../pages/archive/*.md');
+allPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+const pageTitle = "Archive";
+---
+
+<html lang="en">
+	<BaseLayout pageTitle = {pageTitle} >
+		<h1 style="padding-bottom: 1.8em">{pageTitle}</h1>
+
+		{allPosts.map((post) => <PostLink post={post} lines=1 />)}
+	</BaseLayout>
+</html>

@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+import SubscriptionForm from '../components/SubscriptionForm.astro';
+import PostLink from '../components/PostLink.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const posts = await Astro.glob('./archive/*.md');
+posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+const lastPost = posts[0];
+const pageTitle = 'home';
+const recentPosts = posts.slice(1,6);
+---
+
+<html lang="en">
+	<BaseLayout pageTitle={pageTitle}>
+	<h1 style="padding-bottom: 1.6em">Latest</h1>
+	<PostLink post={lastPost} lines=3 />
+
+		  <div class="presentation-container">
+			<h1 style="padding-bottom: 1.6em; padding-top: 5em">About</h1>
+			<p> I'm co-founder and partner at node.vc, an
+			early-stage vc firm. I support and invest in startups. I
+			also write about technology, products, books, and ideas
+			that interest me. I publish all of it here and to my
+			newsletter. Subscribe below:
+			</p>
+			<SubscriptionForm/>
+		  </div>
+		  <div class="archive-container">
+			<h1 style="padding-bottom: 1.6em;padding-top:5em">Recent</h1>
+			{recentPosts.map((post) => <PostLink post={post} lines=1 />)}
+			<a href='./archive/'>
+				<div class="link-div">
+					<h2 style="padding-top: 0.5em; padding-bottom: 0.5em">Archive</h2>
+				</div>
+			</a>
+		  </div>
+	</BaseLayout>
+</html>
