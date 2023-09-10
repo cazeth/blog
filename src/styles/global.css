@@ -1,8 +1,9 @@
 :root {
   --bg: #ffff;
   --headline-color: #0C1821;
-  --secondary-headline-color: #324a5f;
-  --sub-headline-color: #39393A;
+  --secondary-headline-color: #162B3C;
+  --sub-headline-color: #324a5f;
+  --third-headline-color: #39393A;
   --reading-text-color: #39393A;
   --hover-link-bg: #f3f6f5;
 }
@@ -23,16 +24,16 @@ body {
 }
 
 h1 {
-	margin: 0rem 0;
 	font-size: 1.1rem;
 	font-weight: 500;
+	margin: 0rem 0;
         color: var(--headline-color);
 }
 
 h2 {
-	margin: 0rem 0;
 	font-size: 1rem;
 	font-weight: 500;
+	margin: 0rem 0;
 	color: var(--secondary-headline-color);
 }
 
@@ -43,8 +44,17 @@ h3 {
 	color: var(--sub-headline-color);
 }
 
+h4{
+	font-size: 0.8rem;
+	font-weight: 400;
+	font-style: italic;
+	margin: 0rem 0;
+	color: var(--secondary-headline-color);
+}
 
 p {
+	margin-top: 0;
+	padding-top: 0.7rem;
 	font-size: 1rem;
 	color: var(--reading-text-color);
 }
