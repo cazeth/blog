@@ -16,17 +16,17 @@ const recentPosts = posts.slice(1,6);
 	<PostLink post={lastPost} lines=3 />
 
 		  <div class="presentation-container">
-			<h1 style="padding-bottom: 1.6em; padding-top: 5em">About</h1>
+			<h1 style="padding-bottom: 1.6em; padding-top: 3em">About</h1>
 			<p> I'm co-founder and partner at node.vc, an
 			early-stage vc firm. I support and invest in startups. I
 			also write about technology, products, books, and ideas
 			that interest me. I publish all of it here and to my
 			newsletter. Subscribe below:
 			</p>
-			<SubscriptionForm/>
 		  </div>
+		<SubscriptionForm/>
 		  <div class="archive-container">
-			<h1 style="padding-bottom: 1.6em;padding-top:5em">Recent</h1>
+			<h1 style="padding-bottom: 1.8em;padding-top:3em">Recent</h1>
 			{recentPosts.map((post) => <PostLink post={post} lines=1 />)}
 			<a href='./archive/'>
 				<div class="link-div">
