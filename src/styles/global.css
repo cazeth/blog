@@ -1,10 +1,8 @@
 :root {
   --bg: #ffff;
   --headline-color: #0C1821;
-  --secondary-headline-color: #162B3C;
   --sub-headline-color: #324a5f;
-  --third-headline-color: #39393A;
-  --reading-text-color: #39393A;
+  --reading-text-color: #3b342b;
   --hover-link-bg: #f3f6f5;
 }
 
@@ -34,7 +32,7 @@ h2 {
 	font-size: 1rem;
 	font-weight: 500;
 	margin: 0rem 0;
-	color: var(--secondary-headline-color);
+	color: var(--headline-color);
 }
 
 h3 {
@@ -49,23 +47,24 @@ h4{
 	font-weight: 400;
 	font-style: italic;
 	margin: 0rem 0;
-	color: var(--secondary-headline-color);
+	color: var(--sub-headline-color);
 }
 
 p {
 	margin-top: 0;
 	padding-top: 0.7rem;
 	font-size: 1rem;
+	line-height: 1.65;
 	color: var(--reading-text-color);
 }
 
 a:link {
-        color: var(--secondary-headline-color);
+        color: var(--headline-color);
 	text-decoration: none;
 }
 
 a:visited {
-        color: var(--secondary-headline-color);
+        color: var(--headline-color);
 	text-decoration: none;
 }
 
