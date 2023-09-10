@@ -9,10 +9,10 @@ const {post, lines} = Astro.props;
 <a href={post.url}>
 	<div class="link-div">
 		{lines == 1 && <h2 style="padding-top:0.5em; padding-bottom:0.5em">{post.frontmatter.title}</h2>}
-		{lines >= 2 && <h2 style="padding-top:0.7em">{post.frontmatter.title}</h2>}
+		{lines >= 2 && <h2 style="padding-top:0.7em; padding-bottom:0.15em">{post.frontmatter.title}</h2>}
 		{lines == 2 && (post.frontmatter.summary) && <h3 style="padding-bottom:0.7em">{post.frontmatter.summary}</h3>}
 		{lines == 2 && (!post.frontmatter.summary) && <h4 style="padding-bottom:0.7em">{post.frontmatter.date}</h3>}
-		{lines == 3 && (post.frontmatter.summary) && <h3>{post.frontmatter.summary}</h3>}
+		{lines == 3 && (post.frontmatter.summary) && <h3 style="padding-bottom:0.15em">{post.frontmatter.summary}</h3>}
 		{lines == 3 && <h4 style="padding-bottom:0.7em">{post.frontmatter.date}</h3>}
 	</div>
 </a>
