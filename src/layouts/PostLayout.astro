@@ -5,8 +5,8 @@ const {frontmatter} = Astro.props;
 import SubscriptionForm from '../components/SubscriptionForm.astro'
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-	<h2 style="padding-bottom:0.2em"> {frontmatter.title} </h1>
-	<h3 style="padding-bottom: 1.6em">{frontmatter.summary}</h1>
+	<h1 style="padding-bottom: 0.2em">{frontmatter.title}</h1>
+	<h3 style="padding-bottom: 1.6em">{frontmatter.summary}</h3>
 
    <slot/>
    <hr />
