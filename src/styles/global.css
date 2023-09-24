@@ -83,3 +83,35 @@ a:visited {
 
 	background-color: var(--hover-link-bg);
 }
+
+.SubscriptionForm {
+	display: flex;
+	max-width: 500px;
+	width: 100%;
+	border-radius:4px;
+}
+
+form {
+	width: 100%;
+	display: flex;
+}
+
+
+input[type=email] {
+	width: 100%;
+	font-size: 1rem;
+	border: none;
+	border-bottom: 1px solid var(--sub-headline-color);
+	font-family: var(--read-font), sans-serif;
+	border-radius: 0px;
+	min-height: 30px;
+}
+
+button[type=submit] {
+	background-color: var(--sub-headline-color);
+	border: none;
+	border-radius: 3px;
+	color: white;
+	font-size: 1rem;
+	font-family: var(--read-font), sans-serif;
+}

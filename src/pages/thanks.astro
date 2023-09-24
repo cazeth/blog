@@ -1,0 +1,16 @@
+---
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostLink from '../components/PostLink.astro';
+const allPosts = await Astro.glob('../pages/archive/*.md');
+allPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+const pageTitle = "Thank You";
+---
+
+<html lang="en">
+	<BaseLayout pageTitle = {pageTitle} >
+		<h1 style="padding-bottom: 1.8em">Thank you for subscribing.</h1>
+		<p> Emails are currently delivered by Substack under the name Universal
+		Constructor. You will soon receive a confirmation to your email. </p>
+	</BaseLayout>
+</html>
