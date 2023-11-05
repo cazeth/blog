@@ -3,6 +3,9 @@ import '../styles/global.css';
 import BaseLayout from './BaseLayout.astro';
 const {frontmatter} = Astro.props;
 import SubscriptionForm from '../components/SubscriptionForm.astro'
+const posts = await Astro.glob('../pages/archive/*.md');
+const RelatedPost = posts.find(post => post.file.includes(frontmatter.related));
+import PostLink from '../components/PostLink.astro'
 ---
 <BaseLayout pageTitle={frontmatter.title}>
 	<h1 style="padding-bottom: 0.2em">{frontmatter.title}</h1>
@@ -11,5 +14,7 @@ import SubscriptionForm from '../components/SubscriptionForm.astro'
    <slot/>
    <div class="placeholder" style="padding-bottom: 3em" />
    <SubscriptionForm/>
+   {RelatedPost && <h2 style="padding-top: 2em; padding-bottom: 0.5em">Related Posts</h2>}
+   {RelatedPost && <PostLink post={RelatedPost} lines=3 />}
 
 </BaseLayout>
