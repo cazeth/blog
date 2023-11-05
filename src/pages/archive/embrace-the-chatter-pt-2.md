@@ -4,6 +4,7 @@ title: Embrace the Chatter (pt. 2)
 date: '2023-10-11'
 tags: ['AI','LLMs']
 summary: The market dynamics of LLMs look familiar. How they play out is to be seen.
+related: src/pages/archive/embrace-the-chatter.md
 images: []
 ---
 When I wrote about the product landscape around Large Language Models a few months ago, I talked about it through the lens of the end-user experience and the tug-of-war inherent to most software applications: On one end of the spectrum is purpose-built products, with maximum proficiency at a certain task - on the other is maximum user convenience through fewer, more general applications. This settles, at least temporarily, into a product landscape determined by all kinds of factors including, as I wrote in my earlier post, the workings of LLMs.
