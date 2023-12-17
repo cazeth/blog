@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
 title: The Benefits of the Black Box
-date: 2023-05-03
+date: '2023-05-03'
 tags: ['Social Networks','Open Source']
 summary: Finding the right combination of openness and opacity.
 images: []
