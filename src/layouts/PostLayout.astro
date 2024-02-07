@@ -9,8 +9,9 @@ import PostLink from '../components/PostLink.astro'
 ---
 <BaseLayout pageTitle={frontmatter.title}>
 	<h1 style="padding-bottom: 0.2em">{frontmatter.title}</h1>
-	<h3 style="padding-bottom: 1.6em">{frontmatter.summary}</h3>
-
+	<h3 style="padding-bottom: 0.4em">{frontmatter.summary}</h3>
+	<hr/>
+	<h5 style="padding-bottom: 0.7em">{frontmatter.date}</h4>
    <slot/>
    <div class="placeholder" style="padding-bottom: 3em" />
    <SubscriptionForm/>
