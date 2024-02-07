@@ -12,7 +12,7 @@
   "dependencies": {
     "@fontsource/lato": "^5.0.12",
     "@fontsource/lora": "^5.0.8",
-    "astro": "^3.0.10",
+    "astro": "^4.3.4",
     "npm": "^10.2.3"
   }
 }
